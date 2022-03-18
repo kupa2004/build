@@ -1,6 +1,6 @@
-- name: Create an instance
-  hosts: localhost
-  gather_facts: no
+---
+- hosts: localhost
+  remote_user: root
   vars:
       gcp_project: my-project
       gcp_cred_kind: serviceaccount

@@ -9,6 +9,16 @@
       region: "us-central1"
 
   tasks:
+  #  - name: Create directory
+   #   file:
+    #    path: /home/Instance
+    #    state: directory
+
+    #- name: Clone boxfuse
+    #  git:
+     #   repo: 'https://github.com/kupa2004/Instance.git'
+      #  dest: /home/Instance/
+        
    - name: create a disk
      gcp_compute_disk:
          name: 'disk-instance'

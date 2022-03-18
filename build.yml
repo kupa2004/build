@@ -3,7 +3,7 @@
   remote_user: root
   vars:
       gcp_project: my-project
-      gcp_cred_kind: kupa
+      gcp_cred_kind: serviceaccount
       gcp_cred_file: /home/cred-kupa.json
       zone: "us-central1-a"
       region: "us-central1"

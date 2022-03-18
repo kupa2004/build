@@ -74,7 +74,7 @@
 
 - name: package boxfuse
   hosts: new_instances
-  #connection: ssh
+  connection: ssh
   remote_user: ubuntu
   become_user: root
   become: true

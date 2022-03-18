@@ -5,8 +5,8 @@
       gcp_project: weighty-casing-338809
       gcp_cred_kind: serviceaccount
       gcp_cred_file: /home/cred-kupa.json
-      zone: "us-central1-a"
-      region: "us-central1"
+      zone: "us-west1-b"
+      region: "us-west1"
 
   tasks:
   #  - name: Create directory
@@ -22,8 +22,8 @@
    - name: create a disk
      gcp_compute_disk:
          name: 'disk-instance'
-         size_gb: 50
-         source_image: 'projects/ubuntu-os-cloud/global/images/family/ubuntu-1604-lts'
+         size_gb: 15
+         source_image: 'ubuntu-2004-focal-v20220303a'
          zone: "{{ zone }}"
          project: "{{ gcp_project }}"
          auth_kind: "{{ gcp_cred_kind }}"
@@ -47,7 +47,7 @@
      gcp_compute_instance:
          state: present
          name: test-vm
-         machine_type: n1-standard-1
+         machine_type: f1-micro
          disks:
            - auto_delete: true
              boot: true
